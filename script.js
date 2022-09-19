@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded',()=>{
+
 let dino = document.querySelector('.dino');
 let drag = document.querySelector('.drag');
 let score = document.getElementById('score');
@@ -59,3 +61,4 @@ setInterval((e)=>{
 
 }, 10);
 
+})
