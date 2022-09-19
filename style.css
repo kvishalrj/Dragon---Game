@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.gameContainer{
+    width: 100%;
+    height: 100vh;
+    background: url(/images/bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.board{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 370px;
+    font-size: 60px;
+    color: red;
+}
+
+#score{
+    position: relative;
+    border: 2px red;
+}
+
+#gameOver{
+    position: relative;
+    left: 200px;
+    visibility: hidden;
+}
+
+.dino{
+    width: 200px;
+    height: 100px;
+    left: 200px;
+    background-image: url(/images/dino.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+.dinoAnimateUp{
+    animation: dinoAnimateUp .6s linear;
+}
+
+.dinoAnimateDown {
+    animation: dinoAnimateDown .8s linear;
+}
+
+.drag{
+    width: 150px;
+    height: 100px;
+    left: 1000px;
+    background-image: url(/images/dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+.dragAnimateMove{
+    animation: dragAnimateMove 4s linear infinite;
+}
+
+@keyframes dinoAnimateUp {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 350px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes dragAnimateMove {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+@keyframes dinoAnimateDown {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 300px;
+        left: 300px;
+    }
+    100%{
+        bottom: -500px;
+        left: 300px;
+    }
+}
+
